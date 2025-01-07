@@ -1,5 +1,5 @@
 {
-  "name": "@rayyanpanja/vue-ai-chat-bot",
+  "name": "@rayyan-panja/vue-ai-chat-bot",
   "version": "1.0.0",
   "main": "src/vue-chat-bot.js",
   "scripts": {
