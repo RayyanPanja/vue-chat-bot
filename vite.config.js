@@ -5,9 +5,9 @@ export default defineConfig({
   plugins: [vue()],
   build: {
     lib: {
-      entry: "./src/vue-chat-bot.js",
+      entry: "./src/vue-ai-chat-bot.js",
       name: "VueChatBot",
-      fileName: (format) => `vue-chat-bot.${format}.js`,
+      fileName: (format) => `vue-ai-chat-bot.${format}.js`,
     },
     rollupOptions: {
       external: ["vue"],
