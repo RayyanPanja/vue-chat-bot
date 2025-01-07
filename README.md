@@ -1,38 +1,79 @@
 # vue-ai-chat-bot
 
-`vue-ai-chat-bot` is a configurable, AI-powered chat window component designed to help integrate a chat assistant into any Vue 3 project. This package is flexible, customizable, and easy to use, providing a smooth user experience for interactive chats.
+## Project Description:
+vue-ai-chat-bot is a customizable chat window component designed to integrate an AI-powered chat assistant into web applications. It supports dynamic theming, is built with Vue 3's Composition API, and can be easily configured through JSON files for bot settings and appearance. The component connects seamlessly to an Express backend that communicates with the OpenAI API, offering a smooth and interactive chat experience.
 
-## Features
+## Features:
 
-- Configurable via JSON: Easily configure bot settings, API endpoints, and appearance.
-- Dynamic Theming: Supports multiple themes that can be switched easily.
-- Vue 3 with Composition API: Built for Vue 3 with the Composition API and `<script setup>`.
-- Express Backend Integration: Communicates with an Express backend for AI chat responses.
-- Customizable Design: Fully customizable appearance and behavior of the chat window.
+* Configurable settings for bot behavior
+* Customizable chat window themes
+* Integrates with OpenAI API
+* Built with Vue 3 and Composition API
+* Easy integration into Vue-based projects
 
-## Installation
+## Installation Instructions:
 
-To install `vue-ai-chat-bot`, you can use npm:
+To install vue-ai-chat-bot, simply add it to your project's dependencies. Follow the steps below for installation.
+
+Install the package:
 
 ```bash
-npm install vue-ai-chat-bot
+npm i @rayyan-panja/vue-ai-chat-bot
 ```
 
-## Usage
-
-Now, you can use this ChatBot.vue component anywhere in your Vue app. Simply import and include it in your main layout or any component where you want to display the chat bot:
+Include the component:
 
 ```vue
 <script setup>
-import ChatBot from "./components/ChatBot.vue";
+import VueAIChatBot from '@rayyan-panja/vue-ai-chat-bot';
 </script>
+
 <template>
-  <div>
-    <ChatBot />
-  </div>
+  <VueAIChatBot />
 </template>
 ```
 
-## License
+## Set up the backend:
 
+Add The Endpoint to .env file
+
+```env
+VITE_CHATBOT_API_ENDPOINT=
+```
+
+## Usage:
+
+To use the vue-ai-chat-bot component in your project, follow the steps below:
+
+Import the component:
+```vue
+<script setup>
+import VueAIChatBot from '@rayyan-panja/vue-ai-chat-bot';
+</script>
+```
+
+Add the component to your template:
+```vue
+<template>
+  <VueAIChatBot />
+</template>
+```
+
+## Available Themes:
+vue-ai-chat-bot offers several pre-defined themes for easy customization. You can switch between themes or create your own by adjusting the settings in the configuration file.
+
+{
+  "themes": [
+    "oceanBlue",
+    "lightMode",
+    "darkMode",
+    "sunset",
+    "forestGreen",
+    "purpleRain",
+    "vibrantYellow"
+  ]
+}
+
+## License:
 This project is proprietary and cannot be modified, distributed, or used for commercial purposes without explicit permission.
+
