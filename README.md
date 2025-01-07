@@ -1,6 +1,6 @@
-# vue-chat-bot
+# vue-ai-chat-bot
 
-`vue-chat-bot` is a configurable, AI-powered chat window component designed to help integrate a chat assistant into any Vue 3 project. This package is flexible, customizable, and easy to use, providing a smooth user experience for interactive chats.
+`vue-ai-chat-bot` is a configurable, AI-powered chat window component designed to help integrate a chat assistant into any Vue 3 project. This package is flexible, customizable, and easy to use, providing a smooth user experience for interactive chats.
 
 ## Features
 
@@ -12,10 +12,10 @@
 
 ## Installation
 
-To install `vue-chat-bot`, you can use npm:
+To install `vue-ai-chat-bot`, you can use npm:
 
 ```bash
-npm install vue-chat-bot
+npm install vue-ai-chat-bot
 ```
 
 ## Usage
