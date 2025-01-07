@@ -8,7 +8,7 @@ import "./vue-chat-bot.css"; // Global styles
 import ChatWindow from "./components/ChatWindow.vue";
 
 export default defineComponent({
-  name: "VueChatBot",
+  name: "VueAIChatBot",
   components: {
     ChatWindow,
   },

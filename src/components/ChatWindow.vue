@@ -28,44 +28,25 @@ function sendMessage() {
 </script>
 
 <template>
-  <div>
-    <!-- Chat Icon -->
-    <button
-      class="chat-icon btn btn-primary rounded-circle"
-      @click="toggleChatWindow"
-      title="Open Chat"
-    >
-      <i class="bi bi-chat-dots"></i>
-      <!-- Bootstrap Icon for chat -->
-    </button>
+  <button class="chat-icon btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-3" @click="toggleChatWindow"
+    title="Open Chat">
+    <i class="bi bi-chat-dots"></i>
+  </button>
 
-    <!-- Chat Window -->
-    <div
-      v-if="isChatWindowVisible"
-      class="chat-window card shadow-sm position-fixed bottom-0 end-0 m-3"
-    >
-      <div class="card-body">
-        <div class="messages mb-3" style="max-height: 300px; overflow-y: auto">
-          <div
-            v-for="message in messages"
-            :key="message.id"
-            class="message mb-2"
-          >
-            <div class="alert alert-info mb-1" role="alert">
-              {{ message.text }}
-            </div>
+  <!-- Chat Window -->
+  <div v-if="isChatWindowVisible" class="chat-window card shadow-sm position-fixed bottom-0 end-0 m-3">
+    <div class="card-body">
+      <div class="messages mb-3" style="max-height: 300px; overflow-y: auto">
+        <div v-for="message in messages" :key="message.id" class="message mb-2">
+          <div class="alert alert-info mb-1" role="alert">
+            {{ message.text }}
           </div>
         </div>
-        <div class="input-area d-flex">
-          <input
-            v-model="userMessage"
-            @keyup.enter="sendMessage"
-            class="form-control me-2"
-            placeholder="Type a message..."
-            type="text"
-          />
-          <button @click="sendMessage" class="btn btn-primary">Send</button>
-        </div>
+      </div>
+      <div class="input-area d-flex">
+        <input v-model="userMessage" @keyup.enter="sendMessage" class="form-control me-2"
+          placeholder="Type a message..." type="text" />
+        <button @click="sendMessage" class="btn btn-primary">Send</button>
       </div>
     </div>
   </div>
