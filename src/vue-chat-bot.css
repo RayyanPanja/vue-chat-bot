@@ -1,0 +1,96 @@
+/* Global Styles for Themes */
+:root {
+  --primary: #f1f1f1;
+  --secondary: #ddd;
+  --text: #333;
+  --background: #fff;
+}
+
+/* Ocean Blue */
+body[data-chatbot-theme="oceanBlue"] {
+  --primary: #2c3e50;
+  --secondary: #3498db;
+  --text: #ecf0f1;
+  --background: #34495e;
+}
+
+/* Light Mode */
+body[data-chatbot-theme="lightMode"] {
+  --primary: #f1f1f1;
+  --secondary: #ddd;
+  --text: #333;
+  --background: #fff;
+}
+
+/* Dark Mode */
+body[data-chatbot-theme="darkMode"] {
+  --primary: #333;
+  --secondary: #555;
+  --text: #fff;
+  --background: #1e1e1e;
+}
+
+/* Sunset */
+body[data-chatbot-theme="sunset"] {
+  --primary: #ff6347;
+  --secondary: #ff4500;
+  --text: #fff;
+  --background: #f4f4f4;
+}
+
+/* Forest Green */
+body[data-chatbot-theme="forestGreen"] {
+  --primary: #228b22;
+  --secondary: #6b8e23;
+  --text: #fff;
+  --background: #2f4f4f;
+}
+
+/* Purple Rain */
+body[data-chatbot-theme="purpleRain"] {
+  --primary: #9b59b6;
+  --secondary: #8e44ad;
+  --text: #fff;
+  --background: #34495e;
+}
+
+/* Vibrant Yellow */
+body[data-chatbot-theme="vibrantYellow"] {
+  --primary: #f39c12;
+  --secondary: #f1c40f;
+  --text: #fff;
+  --background: #e67e22;
+}
+
+/* Default base styles (can be used for fallback or shared base styling) */
+body[data-chatbot-theme="default"] {
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --text: #000;
+  --background: #fff;
+}
+
+/* Chatbot Styles using the CSS Variables */
+.chat-window {
+  background-color: var(--background);
+  color: var(--text);
+  border: 1px solid var(--secondary);
+}
+
+.chat-window .message {
+  color: var(--text);
+}
+
+.chat-window .input-area input {
+  background-color: var(--primary);
+  color: var(--text);
+  border: 1px solid var(--secondary);
+}
+
+.theme-toggle {
+  margin-top: 10px;
+  padding: 8px;
+  background-color: var(--primary);
+  color: var(--text);
+  cursor: pointer;
+}
