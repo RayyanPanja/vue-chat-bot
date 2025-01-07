@@ -15,7 +15,7 @@
     "ai",
     "chatbot"
   ],
-  "author": "Dev Codersgarden <dev@coedersgarden.de>",
+  "author": "RayyanPanja <illumi2701@gmail.com>",
   "license": "ISC",
   "description": "A customizable chat bot component for Vue 3, integrated with AI.",
   "dependencies": {
