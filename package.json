@@ -6,7 +6,10 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint --fix .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "patch": "npm version patch && git push && npm publish --access public",
+    "minor": "npm version minor && git push && npm publish --access public",
+    "major": "npm version major && git push && npm publish --access public"
   },
   "keywords": [
     "vue",
