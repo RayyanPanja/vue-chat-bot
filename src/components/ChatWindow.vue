@@ -21,16 +21,16 @@ const sendMessage = () => {
 <template>
   <!-- Chat Button -->
   <button class="chat-open-button" @click="toggleChatWindow" title="Open Chat">
-    <i class="icon-chat"></i>
+    <i class="bi bi-chat"></i>
   </button>
 
   <!-- Chat Window -->
   <div v-if="isChatWindowVisible" class="chat-window">
     <!-- Chat Header -->
     <div class="chat-header">
-      <h6 class="mb-0">Chat Assistant</h6>
+      <h6 class="mb-0">Chat Assistant (Experimental)</h6>
       <button @click="toggleChatWindow" class="close-button">
-        <i class="icon-close"></i>
+        <i class="bi bi-x"></i>
       </button>
     </div>
 
@@ -50,7 +50,7 @@ const sendMessage = () => {
         <input v-model="userMessage" @keyup.enter="sendMessage" class="message-input" placeholder="Type a message..."
           type="text" />
         <button @click="sendMessage" class="send-button">
-          <i class="icon-send"></i>
+          <i class="bi bi-send"></i>
         </button>
       </div>
     </div>
