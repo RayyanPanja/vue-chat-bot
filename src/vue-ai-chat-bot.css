@@ -13,115 +13,136 @@ body[data-chatbot-theme] {
   --background: #fff;
 }
 
-/* Themes */
-body[data-chatbot-theme="oceanBlue"] {
-  --primary: #2c3e50;
-  --secondary: #3498db;
-  --text: #ecf0f1;
-  --background: #34495e;
+/* Chat Button */
+.chat-open-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  color: var(--text);
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: background-color 0.3s ease;
 }
 
-body[data-chatbot-theme="lightMode"] {
-  --primary: #f1f1f1;
-  --secondary: #ddd;
-  --text: #333;
-  --background: #fff;
+.chat-open-button:hover {
+  background-color: var(--secondary);
 }
 
-body[data-chatbot-theme="darkMode"] {
-  --primary: #333;
-  --secondary: #555;
-  --text: #fff;
-  --background: #1e1e1e;
-}
-
-body[data-chatbot-theme="sunset"] {
-  --primary: #ff6347;
-  --secondary: #ff4500;
-  --text: #fff;
-  --background: #f4f4f4;
-}
-
-body[data-chatbot-theme="forestGreen"] {
-  --primary: #228b22;
-  --secondary: #6b8e23;
-  --text: #fff;
-  --background: #2f4f4f;
-}
-
-body[data-chatbot-theme="purpleRain"] {
-  --primary: #9b59b6;
-  --secondary: #8e44ad;
-  --text: #fff;
-  --background: #34495e;
-}
-
-body[data-chatbot-theme="vibrantYellow"] {
-  --primary: #f39c12;
-  --secondary: #f1c40f;
-  --text: #fff;
-  --background: #e67e22;
-}
-
-/* Default Theme */
-body[data-chatbot-theme="default"] {
-  --primary: #007bff;
-  --secondary: #6c757d;
-  --text: #000;
-  --background: #fff;
-}
-
-/* Shared Chatbot Styles */
+/* Chat Window */
 .chat-window {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 350px;
   background-color: var(--background);
   color: var(--text);
   border: 1px solid var(--secondary);
-  border-radius: 8px;
-  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
 }
 
-.chat-window .message {
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: var(--primary);
+  border-bottom: 1px solid var(--secondary);
+}
+
+.chat-header h6 {
+  margin: 0;
+}
+
+.close-button {
+  background: none;
+  border: none;
   color: var(--text);
+  cursor: pointer;
 }
 
-.chat-window .input-area input {
+.chat-body {
+  padding: 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.messages {
+  flex: 1;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.message {
+  margin-bottom: 8px;
+}
+
+.alert {
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.user-message {
+  background-color: var(--primary);
+  text-align: right;
+}
+
+.bot-message {
+  background-color: var(--secondary);
+}
+
+.input-area {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.message-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid var(--secondary);
+  border-radius: 5px;
   background-color: var(--primary);
   color: var(--text);
-  border: 1px solid var(--secondary);
-  border-radius: 4px;
-  padding: 8px;
 }
 
-.chat-window .input-area input:focus {
+.message-input:focus {
   outline: none;
   border-color: var(--secondary);
 }
 
-.chat-window .input-area button {
+.send-button {
   background-color: var(--secondary);
   color: var(--text);
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   padding: 8px 16px;
   cursor: pointer;
 }
 
-.chat-window .input-area button:hover {
+.send-button:hover {
   background-color: var(--primary);
 }
 
-.theme-toggle {
-  margin-top: 10px;
-  padding: 8px;
+/* Chat Footer */
+.chat-footer {
+  padding: 10px;
   background-color: var(--primary);
-  color: var(--text);
-  cursor: pointer;
-  border: 1px solid var(--secondary);
-  border-radius: 4px;
   text-align: center;
-}
-
-.theme-toggle:hover {
-  background-color: var(--secondary);
-  color: var(--background);
+  font-size: 0.8rem;
+  color: var(--text);
 }

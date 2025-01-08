@@ -19,48 +19,46 @@ const sendMessage = () => {
 </script>
 
 <template>
-  <div>
-    <!-- Chat Button -->
-    <button class="chat-icon btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-3" @click="toggleChatWindow"
-      title="Open Chat">
-      <i class="bi bi-chat-dots"></i>
-    </button>
+  <!-- Chat Button -->
+  <button class="chat-open-button" @click="toggleChatWindow" title="Open Chat">
+    <i class="icon-chat"></i>
+  </button>
 
-    <!-- Chat Window -->
-    <div v-if="isChatWindowVisible" class="chat-window card shadow-sm position-fixed bottom-0 end-0 m-3">
-      <!-- Chat Header -->
-      <div class="card-header d-flex justify-content-between align-items-center bg-primary text-white">
-        <h6 class="mb-0">Chat Assistant</h6>
-        <button @click="toggleChatWindow" class="btn btn-sm btn-light">
-          <i class="bi bi-x-lg"></i>
-        </button>
-      </div>
+  <!-- Chat Window -->
+  <div v-if="isChatWindowVisible" class="chat-window">
+    <!-- Chat Header -->
+    <div class="chat-header">
+      <h6 class="mb-0">Chat Assistant</h6>
+      <button @click="toggleChatWindow" class="close-button">
+        <i class="icon-close"></i>
+      </button>
+    </div>
 
-      <!-- Chat Body -->
-      <div class="card-body">
-        <!-- Messages Area -->
-        <div class="messages mb-3" style="max-height: 300px; overflow-y: auto;">
-          <div v-for="message in messages" :key="message.id" class="message">
-            <div :class="['alert', message.isUser ? 'alert-primary text-end' : 'alert-info']" role="alert">
-              {{ message.text }}
-            </div>
+    <!-- Chat Body -->
+    <div class="chat-body">
+      <!-- Messages Area -->
+      <div class="messages">
+        <div v-for="message in messages" :key="message.id" class="message">
+          <div :class="['alert', message.isUser ? 'user-message' : 'bot-message']">
+            {{ message.text }}
           </div>
         </div>
-
-        <!-- Input Area -->
-        <div class="input-area d-flex">
-          <input v-model="userMessage" @keyup.enter="sendMessage" class="form-control me-2"
-            placeholder="Type a message..." type="text" />
-          <button @click="sendMessage" class="btn btn-primary">
-            <i class="bi bi-send"></i>
-          </button>
-        </div>
       </div>
 
-      <!-- Chat Footer -->
-      <div class="card-footer text-center bg-light">
-        <small class="text-muted">Powered by Vue.js & OpenAI</small>
+      <!-- Input Area -->
+      <div class="input-area">
+        <input v-model="userMessage" @keyup.enter="sendMessage" class="message-input" placeholder="Type a message..."
+          type="text" />
+        <button @click="sendMessage" class="send-button">
+          <i class="icon-send"></i>
+        </button>
       </div>
     </div>
+
+    <!-- Chat Footer -->
+    <div class="chat-footer">
+      <small>Powered by Vue.js & OpenAI</small>
+    </div>
   </div>
+
 </template>
