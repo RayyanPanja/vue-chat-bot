@@ -12,6 +12,7 @@ const isChatWindowVisible = ref(false);
 const messages = ref([
   { id: 1, text: "Hello! How can I assist you today?", isUser: false },
 ]);
+
 const userMessage = ref("");
 
 const toggleChatWindow = () => {
@@ -25,6 +26,7 @@ const sendMessage = () => {
 };
 </script>
 
+
 <template>
   <!-- Chat Button -->
   <button class="chat-open-button" @click="toggleChatWindow" title="Open Chat">
@@ -32,41 +34,23 @@ const sendMessage = () => {
   </button>
 
   <!-- Chat Window -->
-  <div v-if="isChatWindowVisible" class="chat-window">
-    <!-- Chat Header -->
-    <div class="chat-header">
-      <h6 class="mb-0">Chat Assistant (Experimental)</h6>
-      <button @click="toggleChatWindow" class="close-button">
-        <i class="bi bi-x"></i>
-      </button>
-    </div>
-
-    <!-- Chat Body -->
-    <div class="chat-body">
-    
-      <!-- Messages Area -->
-      <div class="messages">
-        <div v-for="message in messages" :key="message.id" class="message">
-          <div :class="['alert', message.isUser ? 'user-message' : 'bot-message']">
+  <transition name="fade" mode="out-in">
+    <div v-show="isChatWindowVisible" class="chatbot-popup">
+      <header>
+        <h2>Chat with Us</h2>
+        <button class="close-btn" @click="toggleChatWindow">&times;</button>
+      </header>
+      <main class="chat-area">
+        <ul class="messages">
+          <li v-for="message in messages" :key="message.id" :class="{ 'user-message': message.isUser }">
             {{ message.text }}
-          </div>
-        </div>
-      </div>
-
-      <!-- Input Area -->
-      <div class="input-area">
-        <input v-model="userMessage" @keyup.enter="sendMessage" class="message-input" placeholder="Type a message..."
-          type="text" />
-        <button @click="sendMessage" class="send-button">
-          <i class="bi bi-send"></i>
-        </button>
-      </div>
+          </li>
+        </ul>
+        <form class="message-input" @submit.prevent="sendMessage">
+          <input v-model="userMessage" type="text" placeholder="Type a message..." />
+          <button type="submit">Send</button>
+        </form>
+      </main>
     </div>
-
-    <!-- Chat Footer -->
-    <div class="chat-footer">
-      <small>Powered by Vue.js & OpenAI</small>
-    </div>
-  </div>
-
+  </transition>
 </template>

@@ -1,181 +1,71 @@
 :root {
-    --primary: #333333;
-    --secondary: #4d4d4d;
-    --button-color: #4d4d4d;
-    /* Adding button-color */
-    --text: #333333;
-    --background: #f9f9f9;
-    --chat-window-color: rgba(77, 77, 77, 0.1);
-    /* Default lighter version with opacity */
-    --user-message: #0056b3;
-    --bot-message: #e0f7fa;
-}
+    --color-primary: #007bff;
+    --color-secondary: #f8f9fa;
+    --color-background: #ffffff;
+    --color-text: #212529;
 
-body[data-chatbot-theme] {
-    --primary: #333333;
-    --secondary: #4d4d4d;
-    --button-color: #4d4d4d;
-    /* Adding button-color */
-    --text: #333333;
-    --background: #f9f9f9;
-    --chat-window-color: rgba(77, 77, 77, 0.1);
-    /* Default lighter version with opacity */
-    --user-message: #0056b3;
-    --bot-message: #e0f7fa;
-}
-
-body[data-chatbot-theme="oceanBlue"] {
-    --primary: #14213d;
-    --secondary: #1c2936;
-    --button-color: #1c2936;
-    /* Adding button-color */
-    --text: #f0f4f8;
-    --background: #14213d;
-    --chat-window-color: rgba(28, 41, 54, 0.1);
-    /* Lighter version with opacity */
-    --user-message: #023e8a;
-    --bot-message: #0077b6;
-}
-
-body[data-chatbot-theme="lightMode"] {
-    --primary: #333333;
-    --secondary: #4d4d4d;
-    --button-color: #4d4d4d;
-    /* Adding button-color */
-    --text: #333333;
-    --background: #f9f9f9;
-    --chat-window-color: rgba(77, 77, 77, 0.1);
-    /* Default lighter version with opacity */
-    --user-message: #333333;
-    --bot-message: #f1f8ff;
-}
-
-body[data-chatbot-theme="darkMode"] {
-    --primary: #1e1e2f;
-    --secondary: #2c2c3e;
-    --button-color: #2c2c3e;
-    /* Adding button-color */
-    --text: #eaeaea;
-    --background: #121212;
-    --chat-window-color: rgba(44, 44, 62, 0.1);
-    /* Lighter version with opacity */
-    --user-message: #3e3e4d;
-    --bot-message: #2e2e3b;
-}
-
-body[data-chatbot-theme="sunset"] {
-    --primary: #ff4500;
-    --secondary: #ff6500;
-    --button-color: #ff6500;
-    /* Adding button-color */
-    --text: #ffffff;
-    --background: #ff725e;
-    --chat-window-color: rgba(255, 101, 0, 0.1);
-    /* Lighter version with opacity */
-    --user-message: #ff8f80;
-    --bot-message: #ffcccb;
-}
-
-body[data-chatbot-theme="forestGreen"] {
-    --primary: #2e422d;
-    --secondary: #3d533b;
-    --button-color: #3d533b;
-    /* Adding button-color */
-    --text: #e8f5e9;
-    --background: #1b3b20;
-    --chat-window-color: rgba(61, 83, 59, 0.1);
-    /* Lighter version with opacity */
-    --user-message: #81c784;
-    --bot-message: #a5d6a7;
-}
-
-body[data-chatbot-theme="purpleRain"] {
-    --primary: #5a3d8a;
-    --secondary: #6b4f9c;
-    --button-color: #6b4f9c;
-    /* Adding button-color */
-    --text: #f8f3ff;
-    --background: #2d1b4b;
-    --chat-window-color: rgba(107, 79, 156, 0.1);
-    /* Lighter version with opacity */
-    --user-message: #b39ddb;
-    --bot-message: #d1c4e9;
-}
-
-body[data-chatbot-theme="vibrantYellow"] {
-    --primary: #f4c430;
-    --secondary: #f5d141;
-    --button-color: #f5d141;
-    /* Adding button-color */
-    --text: #2d2d2d;
-    --background: #fff8dc;
-    --chat-window-color: rgba(245, 209, 65, 0.1);
-    /* Lighter version with opacity */
-    --user-message: #fff59d;
-    --bot-message: #fff9c4;
+    --color-primary-dark: #0056b3;
+    /* Darker shade of primary */
+    --color-primary-darker: #003580;
+    /* Even darker shade for active state */
 }
 
 body[data-chatbot-theme="twilightBlue"] {
-    --primary: #3a4750;
-    --secondary: #4d5961;
-    --button-color: #4d5961;
-    /* Adding button-color */
-    --text: #ffffff;
-    --background: #28333f;
-    --chat-window-color: rgba(77, 89, 97, 0.1);
-    /* Lighter version with opacity */
-    --user-message: #219ebc;
-    --bot-message: #8ecae6;
+    --color-primary: #3A5BA0;
+    --color-secondary: #C2D4FC;
+    --color-background: #1E2B40;
+    --color-text: #FFFFFF;
+
+    --color-primary-dark: #2e3164;
+    --color-primary-darker: #1A1C3C;
 }
 
-body[data-chatbot-theme="flamingoPink"] {
-    --primary: #fc6471;
-    --secondary: #fc8591;
-    --button-color: #fc8591;
-    /* Adding button-color */
-    --text: #2e1b1b;
-    --background: #ffe6e6;
-    --chat-window-color: rgba(252, 133, 145, 0.1);
-    /* Lighter version with opacity */
-    --user-message: #ff85a2;
-    --bot-message: #ffc1e3;
+body[data-chatbot-theme="lightGreen"] {
+    --color-primary: #2ecc71;
+    --color-secondary: #d4edda;
+    --color-background: #ffffff;
+    --color-text: #155724;
+
+    --color-primary-dark: #25b14f;
+    --color-primary-darker: #1e8a3c;
 }
 
-body[data-chatbot-theme="default"] {
-    --primary: #0056b3;
-    --secondary: #3366cc;
-    --button-color: #3366cc;
-    /* Adding button-color */
-    --text: #ffffff;
-    --background: #f8f9fa;
-    --chat-window-color: rgba(51, 102, 204, 0.1);
-    /* Lighter version with opacity */
-    --user-message: #b8daff;
-    --bot-message: #cce5ff;
+body[data-chatbot-theme="darkMode"] {
+    --color-primary: #222831;
+    --color-secondary: #393e46;
+    --color-background: #000000;
+    --color-text: #eeeeee;
+
+    --color-primary-dark: #1e2126;
+    --color-primary-darker: #16181d;
 }
 
-body[data-chatbot-theme="desertDusk"] {
-    --primary: #d8a46e;
-    --secondary: #e2b280;
-    --button-color: #e2b280;
-    /* Adding button-color */
-    --text: #2e2e2e;
-    --background: #f5ebe0;
-    --chat-window-color: rgba(226, 178, 128, 0.1);
-    /* Lighter version with opacity */
-    --user-message: #ff9e5f;
-    --bot-message: #ffdac6;
+body[data-chatbot-theme="sunsetOrange"] {
+    --color-primary: #e63946;
+    --color-secondary: #f4a261;
+    --color-background: #ffffff;
+    --color-text: #2a2a2a;
+
+    --color-primary-dark: #d0333b;
+    --color-primary-darker: #9b2226;
 }
 
-body[data-chatbot-theme="arcticWhite"] {
-    --primary: #e3f2fd;
-    --secondary: #e6f5ff;
-    --button-color: #e6f5ff;
-    /* Adding button-color */
-    --text: #1e3a8a;
-    --background: #ffffff;
-    --chat-window-color: rgba(230, 245, 255, 0.1);
-    /* Lighter version with opacity */
-    --user-message: #bbdefb;
-    --bot-message: #64b5f6;
+body[data-chatbot-theme="midnightPurple"] {
+    --color-primary: #6a0572;
+    --color-secondary: #d4b0f2;
+    --color-background: #1b1b2f;
+    --color-text: #ffffff;
+
+    --color-primary-dark: #580464;
+    --color-primary-darker: #400349;
+}
+
+body[data-chatbot-theme="oceanTeal"] {
+    --color-primary: #00adb5;
+    --color-secondary: #e0f7fa;
+    --color-background: #ffffff;
+    --color-text: #004d40;
+
+    --color-primary-dark: #008e9a;
+    --color-primary-darker: #006466;
 }

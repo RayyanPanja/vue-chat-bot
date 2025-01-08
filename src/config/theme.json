@@ -1,13 +1,11 @@
 {
   "themes": [
-    "oceanBlue",
-    "lightMode",
-    "darkMode",
-    "sunset",
-    "forestGreen",
-    "purpleRain",
-    "vibrantYellow",
+    "default",
     "twilightBlue",
-    "flamingoPink"
+    "lightGreen",
+    "darkMode",
+    "sunsetOrange",
+    "midnightPurple",
+    "oceanTeal"
   ]
 }
