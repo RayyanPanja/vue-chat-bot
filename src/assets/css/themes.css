@@ -5,9 +5,7 @@
     --color-text: #212529;
 
     --color-primary-dark: #0056b3;
-    /* Darker shade of primary */
     --color-primary-darker: #003580;
-    /* Even darker shade for active state */
 }
 
 body[data-chatbot-theme="twilightBlue"] {

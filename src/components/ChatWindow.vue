@@ -26,34 +26,37 @@ const sendMessage = () => {
 };
 </script>
 
-
 <template>
   <!-- Chat Button -->
-  <button type="button" v-show="!isChatWindowVisible" class="chat-open-button" @click="toggleChatWindow"
+  <button type="button" v-show="!isChatWindowVisible" class="btn btn-primary" @click="toggleChatWindow"
     title="Open Chat">
     <i class="bi bi-chat"></i>
   </button>
 
   <!-- Chat Window -->
   <transition name="fade" mode="out-in">
-    <div v-show="isChatWindowVisible" class="chatbot-popup">
-      <div class="header">
-        <h2>Chat with Us</h2>
-        <button class="close-btn" @click="toggleChatWindow">&times;</button>
-      </div>
-      <div class="chat-area">
-        <div class="messages">
-          <div v-for="message in messages" :key="message.id" class="message"
-            :class="{ 'user-message': message.isUser }">
-            {{ message.text }}
+    <div v-show="isChatWindowVisible" class="position-fixed bottom-0 end-0 m-3">
+      <div class="card" style="width: 400px;">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <h5 class="mb-0">Chat with Us</h5>
+          <button type="button" class="btn-close" @click="toggleChatWindow"></button>
+        </div>
+        <div class="card-body">
+          <div class="chat-area">
+            <div class="messages">
+              <div v-for="message in messages" :key="message.id" class="message mb-2"
+                :class="{ 'bg-primary text-white': message.isUser, 'bg-light': !message.isUser }">
+                {{ message.text }}
+              </div>
+            </div>
+            <form class="input-group mt-3" @submit.prevent="sendMessage">
+              <input v-model="userMessage" type="text" class="form-control" placeholder="Type a message..." />
+              <button type="submit" class="btn btn-primary">
+                <i class="bi bi-send"></i>
+              </button>
+            </form>
           </div>
         </div>
-        <form class="message-input" @submit.prevent="sendMessage">
-          <input v-model="userMessage" type="text" placeholder="Type a message..." />
-          <button type="submit">
-            <i class="bi bi-send"></i>
-          </button>
-        </form>
       </div>
     </div>
   </transition>
