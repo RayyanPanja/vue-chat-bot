@@ -1,8 +1,6 @@
 :root {
     --primary: #333333;
-    /* Dark primary */
     --secondary: #ffffff;
-    /* Light secondary */
     --text: #333333;
     --background: #f9f9f9;
     --user-message: #0056b3;
@@ -106,4 +104,22 @@ body[data-chatbot-theme="default"] {
     --background: #f8f9fa;
     --user-message: #b8daff;
     --bot-message: #cce5ff;
+}
+
+body[data-chatbot-theme="desertDusk"] {
+    --primary: #d8a46e;
+    --secondary: #ffffff;
+    --text: #2e2e2e;
+    --background: #f5ebe0;
+    --user-message: #ff9e5f;
+    --bot-message: #ffdac6;
+}
+
+body[data-chatbot-theme="arcticWhite"] {
+    --primary: #e3f2fd;
+    --secondary: #ffffff;
+    --text: #1e3a8a;
+    --background: #ffffff;
+    --user-message: #bbdefb;
+    --bot-message: #64b5f6;
 }
