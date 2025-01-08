@@ -1,6 +1,7 @@
 :root {
     --primary: #333333;
-    --secondary: #ffffff;
+    --secondary: lighten(var(--primary), 30%);
+    /* Lighten primary color by 30% */
     --text: #333333;
     --background: #f9f9f9;
     --user-message: #0056b3;
@@ -9,7 +10,8 @@
 
 body[data-chatbot-theme] {
     --primary: #333333;
-    --secondary: #ffffff;
+    --secondary: lighten(var(--primary), 30%);
+    /* Lighten primary color by 30% */
     --text: #333333;
     --background: #f9f9f9;
     --user-message: #0056b3;
@@ -18,7 +20,8 @@ body[data-chatbot-theme] {
 
 body[data-chatbot-theme="oceanBlue"] {
     --primary: #14213d;
-    --secondary: #ffffff;
+    --secondary: lighten(var(--primary), 30%);
+    /* Lighten oceanBlue primary color by 30% */
     --text: #f0f4f8;
     --background: #14213d;
     --user-message: #023e8a;
@@ -27,7 +30,7 @@ body[data-chatbot-theme="oceanBlue"] {
 
 body[data-chatbot-theme="lightMode"] {
     --primary: #333333;
-    --secondary: #ffffff;
+    --secondary: lighten(var(--primary), 30%);
     --text: #333333;
     --background: #f9f9f9;
     --user-message: #333333;
@@ -36,7 +39,7 @@ body[data-chatbot-theme="lightMode"] {
 
 body[data-chatbot-theme="darkMode"] {
     --primary: #1e1e2f;
-    --secondary: #ffffff;
+    --secondary: lighten(var(--primary), 30%);
     --text: #eaeaea;
     --background: #121212;
     --user-message: #3e3e4d;
@@ -45,7 +48,7 @@ body[data-chatbot-theme="darkMode"] {
 
 body[data-chatbot-theme="sunset"] {
     --primary: #ff4500;
-    --secondary: #ffffff;
+    --secondary: lighten(var(--primary), 30%);
     --text: #ffffff;
     --background: #ff725e;
     --user-message: #ff8f80;
@@ -54,7 +57,7 @@ body[data-chatbot-theme="sunset"] {
 
 body[data-chatbot-theme="forestGreen"] {
     --primary: #2e422d;
-    --secondary: #ffffff;
+    --secondary: lighten(var(--primary), 30%);
     --text: #e8f5e9;
     --background: #1b3b20;
     --user-message: #81c784;
@@ -63,7 +66,7 @@ body[data-chatbot-theme="forestGreen"] {
 
 body[data-chatbot-theme="purpleRain"] {
     --primary: #5a3d8a;
-    --secondary: #ffffff;
+    --secondary: lighten(var(--primary), 30%);
     --text: #f8f3ff;
     --background: #2d1b4b;
     --user-message: #b39ddb;
@@ -72,7 +75,7 @@ body[data-chatbot-theme="purpleRain"] {
 
 body[data-chatbot-theme="vibrantYellow"] {
     --primary: #f4c430;
-    --secondary: #ffffff;
+    --secondary: lighten(var(--primary), 30%);
     --text: #2d2d2d;
     --background: #fff8dc;
     --user-message: #fff59d;
@@ -81,7 +84,7 @@ body[data-chatbot-theme="vibrantYellow"] {
 
 body[data-chatbot-theme="twilightBlue"] {
     --primary: #3a4750;
-    --secondary: #ffffff;
+    --secondary: lighten(var(--primary), 30%);
     --text: #ffffff;
     --background: #28333f;
     --user-message: #219ebc;
@@ -90,7 +93,7 @@ body[data-chatbot-theme="twilightBlue"] {
 
 body[data-chatbot-theme="flamingoPink"] {
     --primary: #fc6471;
-    --secondary: #ffffff;
+    --secondary: lighten(var(--primary), 30%);
     --text: #2e1b1b;
     --background: #ffe6e6;
     --user-message: #ff85a2;
@@ -99,7 +102,7 @@ body[data-chatbot-theme="flamingoPink"] {
 
 body[data-chatbot-theme="default"] {
     --primary: #0056b3;
-    --secondary: #ffffff;
+    --secondary: lighten(var(--primary), 30%);
     --text: #ffffff;
     --background: #f8f9fa;
     --user-message: #b8daff;
@@ -108,7 +111,7 @@ body[data-chatbot-theme="default"] {
 
 body[data-chatbot-theme="desertDusk"] {
     --primary: #d8a46e;
-    --secondary: #ffffff;
+    --secondary: lighten(var(--primary), 30%);
     --text: #2e2e2e;
     --background: #f5ebe0;
     --user-message: #ff9e5f;
@@ -117,7 +120,7 @@ body[data-chatbot-theme="desertDusk"] {
 
 body[data-chatbot-theme="arcticWhite"] {
     --primary: #e3f2fd;
-    --secondary: #ffffff;
+    --secondary: lighten(var(--primary), 30%);
     --text: #1e3a8a;
     --background: #ffffff;
     --user-message: #bbdefb;
