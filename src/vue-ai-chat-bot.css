@@ -28,7 +28,7 @@
   bottom: 80px;
   right: 20px;
   width: 350px;
-  background-color: var(--background);
+  background-color: var(--chat-window-color);
   color: var(--text);
   border: 1px solid var(--secondary);
   border-radius: 10px;
