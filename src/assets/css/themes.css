@@ -1,109 +1,109 @@
 :root {
-    --primary: #ffffff;
-    /* Light primary */
-    --secondary: #333333;
-    /* Dark secondary */
+    --primary: #333333;
+    /* Dark primary */
+    --secondary: #ffffff;
+    /* Light secondary */
     --text: #333333;
     --background: #f9f9f9;
-    --user-message: #e0f7fa;
-    --bot-message: #e8eaf6;
+    --user-message: #0056b3;
+    --bot-message: #e0f7fa;
 }
 
 body[data-chatbot-theme] {
-    --primary: #ffffff;
-    --secondary: #333333;
+    --primary: #333333;
+    --secondary: #ffffff;
     --text: #333333;
     --background: #f9f9f9;
-    --user-message: #e0f7fa;
-    --bot-message: #e8eaf6;
+    --user-message: #0056b3;
+    --bot-message: #e0f7fa;
 }
 
 body[data-chatbot-theme="oceanBlue"] {
     --primary: #14213d;
-    --secondary: #1b2838;
+    --secondary: #ffffff;
     --text: #f0f4f8;
     --background: #14213d;
-    --user-message: #0077b6;
-    --bot-message: #023e8a;
+    --user-message: #023e8a;
+    --bot-message: #0077b6;
 }
 
 body[data-chatbot-theme="lightMode"] {
-    --primary: #ffffff;
-    --secondary: #333333;
+    --primary: #333333;
+    --secondary: #ffffff;
     --text: #333333;
     --background: #f9f9f9;
-    --user-message: #f1f8ff;
-    --bot-message: #d1e7ff;
+    --user-message: #333333;
+    --bot-message: #f1f8ff;
 }
 
 body[data-chatbot-theme="darkMode"] {
-    --primary: #333333;
-    --secondary: #1e1e2f;
+    --primary: #1e1e2f;
+    --secondary: #ffffff;
     --text: #eaeaea;
     --background: #121212;
-    --user-message: #2e2e3b;
-    --bot-message: #3e3e4d;
+    --user-message: #3e3e4d;
+    --bot-message: #2e2e3b;
 }
 
 body[data-chatbot-theme="sunset"] {
-    --primary: #ff725e;
-    --secondary: #ff4500;
+    --primary: #ff4500;
+    --secondary: #ffffff;
     --text: #ffffff;
     --background: #ff725e;
-    --user-message: #ffcccb;
-    --bot-message: #ff8f80;
+    --user-message: #ff8f80;
+    --bot-message: #ffcccb;
 }
 
 body[data-chatbot-theme="forestGreen"] {
-    --primary: #4caf50;
-    --secondary: #2e422d;
+    --primary: #2e422d;
+    --secondary: #ffffff;
     --text: #e8f5e9;
     --background: #1b3b20;
-    --user-message: #a5d6a7;
-    --bot-message: #81c784;
+    --user-message: #81c784;
+    --bot-message: #a5d6a7;
 }
 
 body[data-chatbot-theme="purpleRain"] {
-    --primary: #b983ff;
-    --secondary: #5a3d8a;
+    --primary: #5a3d8a;
+    --secondary: #ffffff;
     --text: #f8f3ff;
     --background: #2d1b4b;
-    --user-message: #d1c4e9;
-    --bot-message: #b39ddb;
+    --user-message: #b39ddb;
+    --bot-message: #d1c4e9;
 }
 
 body[data-chatbot-theme="vibrantYellow"] {
-    --primary: #fff8dc;
-    --secondary: #f4c430;
+    --primary: #f4c430;
+    --secondary: #ffffff;
     --text: #2d2d2d;
     --background: #fff8dc;
-    --user-message: #fff9c4;
-    --bot-message: #fff59d;
+    --user-message: #fff59d;
+    --bot-message: #fff9c4;
 }
 
 body[data-chatbot-theme="twilightBlue"] {
-    --primary: #6a9fb5;
-    --secondary: #3a4750;
+    --primary: #3a4750;
+    --secondary: #ffffff;
     --text: #ffffff;
     --background: #28333f;
-    --user-message: #8ecae6;
-    --bot-message: #219ebc;
+    --user-message: #219ebc;
+    --bot-message: #8ecae6;
 }
 
 body[data-chatbot-theme="flamingoPink"] {
-    --primary: #ff9f9f;
-    --secondary: #fc6471;
+    --primary: #fc6471;
+    --secondary: #ffffff;
     --text: #2e1b1b;
     --background: #ffe6e6;
-    --user-message: #ffc1e3;
-    --bot-message: #ff85a2;
+    --user-message: #ff85a2;
+    --bot-message: #ffc1e3;
 }
 
 body[data-chatbot-theme="default"] {
-    --primary: #f8f9fa;
-    --secondary: #0056b3;
+    --primary: #0056b3;
+    --secondary: #ffffff;
     --text: #ffffff;
     --background: #f8f9fa;
-    --user-message: #cce5ff;
-    --bot-message: #b8daff;
+    --user-message: #b8daff;
+    --bot-message: #cce5ff;
 }
