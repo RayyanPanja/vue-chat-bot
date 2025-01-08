@@ -106,8 +106,6 @@ body[data-chatbot-theme="default"] {
   --bot-message: #b8daff;
 }
 
-
-/* Chat Button */
 .chat-open-button {
   position: fixed;
   bottom: 20px;
@@ -131,7 +129,6 @@ body[data-chatbot-theme="default"] {
   background-color: var(--secondary);
 }
 
-/* Chat Window */
 .chat-window {
   position: fixed;
   bottom: 80px;
@@ -176,15 +173,30 @@ body[data-chatbot-theme="default"] {
 
 .messages {
   flex: 1;
-  min-height: 350px;
-  max-height: 600px;
+  min-height: 300px;
+  max-height: 300px;
   overflow-y: auto;
   margin-bottom: 10px;
+  padding-right: 5px;
 }
 
 .messages::-webkit-scrollbar {
-  width: 5px;
-  background-color: var(--primary);
+  width: 8px;
+}
+
+.messages::-webkit-scrollbar-track {
+  background: var(--secondary);
+  border-radius: 4px;
+}
+
+.messages::-webkit-scrollbar-thumb {
+  background: var(--text);
+  border-radius: 4px;
+  border: 2px solid var(--secondary);
+}
+
+.messages::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
 }
 
 .message {
@@ -238,7 +250,6 @@ body[data-chatbot-theme="default"] {
   background-color: var(--primary);
 }
 
-/* Chat Footer */
 .chat-footer {
   padding: 10px;
   background-color: var(--primary);
