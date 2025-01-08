@@ -64,16 +64,3 @@ const sendMessage = () => {
     </div>
   </div>
 </template>
-
-<style scoped>
-.chat-window {
-  width: 350px;
-  max-height: 500px;
-  display: flex;
-  flex-direction: column;
-}
-
-.messages {
-  flex-grow: 1;
-}
-</style>
