@@ -1,0 +1,109 @@
+:root {
+    --primary: #ffffff;
+    /* Light primary */
+    --secondary: #333333;
+    /* Dark secondary */
+    --text: #333333;
+    --background: #f9f9f9;
+    --user-message: #e0f7fa;
+    --bot-message: #e8eaf6;
+}
+
+body[data-chatbot-theme] {
+    --primary: #ffffff;
+    --secondary: #333333;
+    --text: #333333;
+    --background: #f9f9f9;
+    --user-message: #e0f7fa;
+    --bot-message: #e8eaf6;
+}
+
+body[data-chatbot-theme="oceanBlue"] {
+    --primary: #14213d;
+    --secondary: #1b2838;
+    --text: #f0f4f8;
+    --background: #14213d;
+    --user-message: #0077b6;
+    --bot-message: #023e8a;
+}
+
+body[data-chatbot-theme="lightMode"] {
+    --primary: #ffffff;
+    --secondary: #333333;
+    --text: #333333;
+    --background: #f9f9f9;
+    --user-message: #f1f8ff;
+    --bot-message: #d1e7ff;
+}
+
+body[data-chatbot-theme="darkMode"] {
+    --primary: #333333;
+    --secondary: #1e1e2f;
+    --text: #eaeaea;
+    --background: #121212;
+    --user-message: #2e2e3b;
+    --bot-message: #3e3e4d;
+}
+
+body[data-chatbot-theme="sunset"] {
+    --primary: #ff725e;
+    --secondary: #ff4500;
+    --text: #ffffff;
+    --background: #ff725e;
+    --user-message: #ffcccb;
+    --bot-message: #ff8f80;
+}
+
+body[data-chatbot-theme="forestGreen"] {
+    --primary: #4caf50;
+    --secondary: #2e422d;
+    --text: #e8f5e9;
+    --background: #1b3b20;
+    --user-message: #a5d6a7;
+    --bot-message: #81c784;
+}
+
+body[data-chatbot-theme="purpleRain"] {
+    --primary: #b983ff;
+    --secondary: #5a3d8a;
+    --text: #f8f3ff;
+    --background: #2d1b4b;
+    --user-message: #d1c4e9;
+    --bot-message: #b39ddb;
+}
+
+body[data-chatbot-theme="vibrantYellow"] {
+    --primary: #fff8dc;
+    --secondary: #f4c430;
+    --text: #2d2d2d;
+    --background: #fff8dc;
+    --user-message: #fff9c4;
+    --bot-message: #fff59d;
+}
+
+body[data-chatbot-theme="twilightBlue"] {
+    --primary: #6a9fb5;
+    --secondary: #3a4750;
+    --text: #ffffff;
+    --background: #28333f;
+    --user-message: #8ecae6;
+    --bot-message: #219ebc;
+}
+
+body[data-chatbot-theme="flamingoPink"] {
+    --primary: #ff9f9f;
+    --secondary: #fc6471;
+    --text: #2e1b1b;
+    --background: #ffe6e6;
+    --user-message: #ffc1e3;
+    --bot-message: #ff85a2;
+}
+
+body[data-chatbot-theme="default"] {
+    --primary: #f8f9fa;
+    --secondary: #0056b3;
+    --text: #ffffff;
+    --background: #f8f9fa;
+    --user-message: #cce5ff;
+    --bot-message: #b8daff;
+}

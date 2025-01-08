@@ -1,110 +1,4 @@
-:root {
-  --primary: #f1f1f1;
-  --secondary: #ddd;
-  --text: #333;
-  --background: #fff;
-  --user-message: #e0f7fa;
-  --bot-message: #e8eaf6;
-}
-
-body[data-chatbot-theme] {
-  --primary: #f1f1f1;
-  --secondary: #ddd;
-  --text: #333;
-  --background: #fff;
-  --user-message: #e0f7fa;
-  --bot-message: #e8eaf6;
-}
-
-body[data-chatbot-theme="oceanBlue"] {
-  --primary: #1b2838;
-  --secondary: #2978a0;
-  --text: #f0f4f8;
-  --background: #14213d;
-  --user-message: #0077b6;
-  --bot-message: #023e8a;
-}
-
-body[data-chatbot-theme="lightMode"] {
-  --primary: #ffffff;
-  --secondary: #e6e6e6;
-  --text: #333333;
-  --background: #f9f9f9;
-  --user-message: #f1f8ff;
-  --bot-message: #d1e7ff;
-}
-
-body[data-chatbot-theme="darkMode"] {
-  --primary: #1e1e2f;
-  --secondary: #404040;
-  --text: #eaeaea;
-  --background: #121212;
-  --user-message: #2e2e3b;
-  --bot-message: #3e3e4d;
-}
-
-body[data-chatbot-theme="sunset"] {
-  --primary: #ff4500;
-  --secondary: #d62929;
-  --text: #ffffff;
-  --background: #ff725e;
-  --user-message: #ffcccb;
-  --bot-message: #ff8f80;
-}
-
-body[data-chatbot-theme="forestGreen"] {
-  --primary: #2e422d;
-  --secondary: #4caf50;
-  --text: #e8f5e9;
-  --background: #1b3b20;
-  --user-message: #a5d6a7;
-  --bot-message: #81c784;
-}
-
-body[data-chatbot-theme="purpleRain"] {
-  --primary: #5a3d8a;
-  --secondary: #b983ff;
-  --text: #f8f3ff;
-  --background: #2d1b4b;
-  --user-message: #d1c4e9;
-  --bot-message: #b39ddb;
-}
-
-body[data-chatbot-theme="vibrantYellow"] {
-  --primary: #f4c430;
-  --secondary: #d89e1b;
-  --text: #2d2d2d;
-  --background: #fff8dc;
-  --user-message: #fff9c4;
-  --bot-message: #fff59d;
-}
-
-body[data-chatbot-theme="twilightBlue"] {
-  --primary: #3a4750;
-  --secondary: #6a9fb5;
-  --text: #ffffff;
-  --background: #28333f;
-  --user-message: #8ecae6;
-  --bot-message: #219ebc;
-}
-
-body[data-chatbot-theme="flamingoPink"] {
-  --primary: #fc6471;
-  --secondary: #ff9f9f;
-  --text: #2e1b1b;
-  --background: #ffe6e6;
-  --user-message: #ffc1e3;
-  --bot-message: #ff85a2;
-}
-
-body[data-chatbot-theme="default"] {
-  --primary: #0056b3;
-  --secondary: #6c757d;
-  --text: #ffffff;
-  --background: #f8f9fa;
-  --user-message: #cce5ff;
-  --bot-message: #b8daff;
-}
+@import url("./assets/css/themes.css");
 
 .chat-open-button {
   position: fixed;
@@ -173,7 +67,6 @@ body[data-chatbot-theme="default"] {
 
 .messages {
   flex: 1;
-  min-height: 300px;
   max-height: 300px;
   overflow-y: auto;
   margin-bottom: 10px;
