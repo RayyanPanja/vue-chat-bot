@@ -29,28 +29,32 @@ const sendMessage = () => {
 
 <template>
   <!-- Chat Button -->
-  <button class="chat-open-button" @click="toggleChatWindow" title="Open Chat">
+  <button type="button" v-show="!isChatWindowVisible" class="chat-open-button" @click="toggleChatWindow"
+    title="Open Chat">
     <i class="bi bi-chat"></i>
   </button>
 
   <!-- Chat Window -->
   <transition name="fade" mode="out-in">
     <div v-show="isChatWindowVisible" class="chatbot-popup">
-      <header>
+      <div class="header">
         <h2>Chat with Us</h2>
         <button class="close-btn" @click="toggleChatWindow">&times;</button>
-      </header>
-      <main class="chat-area">
-        <ul class="messages">
-          <li v-for="message in messages" :key="message.id" :class="{ 'user-message': message.isUser }">
+      </div>
+      <div class="chat-area">
+        <div class="messages">
+          <div v-for="message in messages" :key="message.id" class="message"
+            :class="{ 'user-message': message.isUser }">
             {{ message.text }}
-          </li>
-        </ul>
+          </div>
+        </div>
         <form class="message-input" @submit.prevent="sendMessage">
           <input v-model="userMessage" type="text" placeholder="Type a message..." />
-          <button type="submit">Send</button>
+          <button type="submit">
+            <i class="bi bi-send"></i>
+          </button>
         </form>
-      </main>
+      </div>
     </div>
   </transition>
 </template>
