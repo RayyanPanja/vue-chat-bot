@@ -1,6 +1,10 @@
 @import url("./assets/css/themes.css");
 
 .chat-open-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
   background-color: var(--color-primary);
   color: var(--color-text);
   border: none;
@@ -12,7 +16,7 @@
   align-items: center;
   font-size: 24px;
   cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -25,38 +29,39 @@
   background-color: var(--color-primary-darker);
 }
 
-
 .chatbot-popup {
   position: fixed;
   bottom: 10px;
   right: 10px;
-  width: 300px;
+  width: 320px;
   background-color: var(--color-background);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   overflow: hidden;
   font-family: 'Arial', sans-serif;
+  animation: fadeIn 0.3s ease-in-out;
 }
 
 .chatbot-popup header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 12px 16px;
   background-color: var(--color-primary);
   color: var(--color-text);
+  font-size: 18px;
 }
 
 .chatbot-popup .close-btn {
   background: none;
   border: none;
   color: var(--color-text);
-  font-size: 20px;
+  font-size: 24px;
   cursor: pointer;
 }
 
 .chat-area {
-  padding: 10px;
+  padding: 16px;
   color: var(--color-text);
   background-color: var(--color-secondary);
 }
@@ -68,34 +73,42 @@
 }
 
 .messages li {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .messages li.user-message {
   text-align: right;
+  background-color: var(--color-primary-light);
+  border-radius: 8px;
+  padding: 8px 12px;
 }
 
 .message-input {
   display: flex;
-  padding: 10px;
+  padding: 12px;
   background-color: var(--color-primary);
 }
 
 .message-input input {
   flex-grow: 1;
-  padding: 5px 10px;
+  padding: 8px 12px;
   border: none;
   border-radius: 5px;
-  margin-right: 5px;
   background-color: var(--color-secondary);
   color: var(--color-text);
+  margin-right: 8px;
 }
 
 .message-input button {
-  padding: 5px 10px;
+  padding: 8px 12px;
   border: none;
   border-radius: 5px;
   background-color: var(--color-primary);
   color: var(--color-text);
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.message-input button:hover {
+  background-color: var(--color-primary-dark);
 }
