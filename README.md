@@ -1,4 +1,4 @@
-# vue-ai-chat-bot
+# vue-ai-chat-bot (Still Under Development Do not Install)
 
 ## Project Description:
 vue-ai-chat-bot is a customizable chat window component designed to integrate an AI-powered chat assistant into web applications. It supports dynamic theming, is built with Vue 3's Composition API, and can be easily configured through JSON files for bot settings and appearance. The component connects seamlessly to an Express backend that communicates with the OpenAI API, offering a smooth and interactive chat experience.
