@@ -2,6 +2,7 @@ import { ref } from "vue";
 import themeConfigs from "../config/theme.json";
 
 const useTheme = () => {
+    
     const themeOptions = Object.keys(themeConfigs.themes).map((key) => {
         // Convert 'oceanBlue' to 'Ocean Blue'
         const label = key
@@ -13,15 +14,13 @@ const useTheme = () => {
         };
     });
 
-    // Get the current theme from localStorage, default to the first option if not found
-    const savedTheme = localStorage.getItem("theme") || themeOptions[0].value;
-    const theme = ref(savedTheme);
+    const theme = ref(themeOptions[0].value);
 
-    // Set theme and save to localStorage
     const setTheme = (value) => {
+        if (!value) return; // Ensure the theme value is valid
         theme.value = value;
-        document.body.dataset["chatbot-theme"] = value;
-        localStorage.setItem("theme", value);
+        const body = document.body;
+        body.setAttribute("data-chatbot-theme", value);
     };
 
     return {
