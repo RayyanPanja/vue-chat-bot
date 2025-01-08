@@ -7,9 +7,9 @@
     "build": "vite build",
     "lint": "eslint --fix .",
     "format": "prettier --write .",
-    "patch": "npm version patch && git push && npm publish --access public",
-    "minor": "npm version minor && git push && npm publish --access public",
-    "major": "npm version major && git push && npm publish --access public"
+    "patch": "npm run build && npm version patch && git push && npm publish --access public",
+    "minor": "npm run build && npm version minor && git push && npm publish --access public",
+    "major": "npm run build && npm version major && git push && npm publish --access public"
   },
   "keywords": [
     "vue",
