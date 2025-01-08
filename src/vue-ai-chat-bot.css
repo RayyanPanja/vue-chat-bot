@@ -6,6 +6,7 @@
   --background: #fff;
 }
 
+/* Global Default Variables */
 body[data-chatbot-theme] {
   --primary: #f1f1f1;
   --secondary: #ddd;
@@ -13,63 +14,86 @@ body[data-chatbot-theme] {
   --background: #fff;
 }
 
-/* Themes */
+/* Ocean Blue */
 body[data-chatbot-theme="oceanBlue"] {
-  --primary: #2c3e50;
-  --secondary: #3498db;
-  --text: #ecf0f1;
-  --background: #34495e;
+  --primary: #1b2838; /* Dark navy */
+  --secondary: #2978a0; /* Bright blue */
+  --text: #f0f4f8; /* Light gray for contrast */
+  --background: #14213d; /* Deep blue background */
 }
 
+/* Light Mode */
 body[data-chatbot-theme="lightMode"] {
-  --primary: #f1f1f1;
-  --secondary: #ddd;
-  --text: #333;
-  --background: #fff;
+  --primary: #ffffff; /* White */
+  --secondary: #e6e6e6; /* Soft gray */
+  --text: #333333; /* Dark text for contrast */
+  --background: #f9f9f9; /* Very light gray */
 }
 
+/* Dark Mode */
 body[data-chatbot-theme="darkMode"] {
-  --primary: #333;
-  --secondary: #555;
-  --text: #fff;
-  --background: #1e1e1e;
+  --primary: #1e1e2f; /* Charcoal */
+  --secondary: #404040; /* Medium gray */
+  --text: #eaeaea; /* Light text for contrast */
+  --background: #121212; /* Deep black */
 }
 
+/* Sunset */
 body[data-chatbot-theme="sunset"] {
-  --primary: #ff6347;
-  --secondary: #ff4500;
-  --text: #fff;
-  --background: #f4f4f4;
+  --primary: #ff4500; /* Vibrant orange */
+  --secondary: #d62929; /* Red */
+  --text: #ffffff; /* White for readability */
+  --background: #ff725e; /* Soft coral */
 }
 
+/* Forest Green */
 body[data-chatbot-theme="forestGreen"] {
-  --primary: #228b22;
-  --secondary: #6b8e23;
-  --text: #fff;
-  --background: #2f4f4f;
+  --primary: #2e422d; /* Deep forest green */
+  --secondary: #4caf50; /* Bright green */
+  --text: #e8f5e9; /* Light greenish-white */
+  --background: #1b3b20; /* Dark moss green */
 }
 
+/* Purple Rain */
 body[data-chatbot-theme="purpleRain"] {
-  --primary: #9b59b6;
-  --secondary: #8e44ad;
-  --text: #fff;
-  --background: #34495e;
+  --primary: #5a3d8a; /* Deep purple */
+  --secondary: #b983ff; /* Lavender */
+  --text: #f8f3ff; /* Light lilac for contrast */
+  --background: #2d1b4b; /* Dark purple background */
 }
 
+/* Vibrant Yellow */
 body[data-chatbot-theme="vibrantYellow"] {
-  --primary: #f39c12;
-  --secondary: #f1c40f;
-  --text: #fff;
-  --background: #e67e22;
+  --primary: #f4c430; /* Bold goldenrod */
+  --secondary: #d89e1b; /* Darker yellow */
+  --text: #2d2d2d; /* Deep gray for contrast */
+  --background: #fff8dc; /* Light cream */
+}
+
+/* Twilight Blue */
+body[data-chatbot-theme="twilightBlue"] {
+  --primary: #3a4750; /* Slate blue */
+  --secondary: #6a9fb5; /* Soft sky blue */
+  --text: #ffffff; /* White for readability */
+  --background: #28333f; /* Deep twilight gray */
+}
+
+/* Flamingo Pink */
+body[data-chatbot-theme="flamingoPink"] {
+  --primary: #fc6471; /* Flamingo pink */
+  --secondary: #ff9f9f; /* Soft pink */
+  --text: #2e1b1b; /* Deep brown for contrast */
+  --background: #ffe6e6; /* Light blush */
 }
 
 /* Default Theme */
 body[data-chatbot-theme="default"] {
-  --primary: #007bff;
-  --secondary: #6c757d;
-  --text: #000;
-  --background: #fff;
+  --primary: #0056b3; /* Strong blue */
+  --secondary: #6c757d; /* Neutral gray */
+  --text: #ffffff; /* White for contrast */
+  --background: #f8f9fa; /* Light gray */
 }
+
 
 /* Chat Button */
 .chat-open-button {
