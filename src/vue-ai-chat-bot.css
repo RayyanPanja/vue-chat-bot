@@ -7,7 +7,7 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: var(--primary);
+  background-color: var(--button-color);
   color: var(--text);
   border: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -20,7 +20,7 @@
 }
 
 .chat-open-button:hover {
-  background-color: var(--secondary);
+  background-color: var(--primary);
 }
 
 .chat-window {
@@ -88,10 +88,6 @@
   border: 2px solid var(--secondary);
 }
 
-.messages::-webkit-scrollbar-thumb:hover {
-  background: var(--primary);
-}
-
 .message {
   margin-bottom: 8px;
 }
@@ -119,15 +115,14 @@
 .message-input {
   flex: 1;
   padding: 8px;
-  border: 1px solid var(--secondary);
+  border: 1px solid var(--primary);
   border-radius: 5px;
-  background-color: var(--primary);
+  background-color: var(--secondary);
   color: var(--text);
 }
 
 .message-input:focus {
   outline: none;
-  border-color: var(--secondary);
 }
 
 .send-button {
@@ -145,7 +140,7 @@
 
 .chat-footer {
   padding: 10px;
-  background-color: var(--primary);
+  background-color: var(--secondary);
   text-align: center;
   font-size: 0.8rem;
   color: var(--text);
