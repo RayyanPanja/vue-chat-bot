@@ -43,6 +43,7 @@ const sendMessage = () => {
 
     <!-- Chat Body -->
     <div class="chat-body">
+    
       <!-- Messages Area -->
       <div class="messages">
         <div v-for="message in messages" :key="message.id" class="message">

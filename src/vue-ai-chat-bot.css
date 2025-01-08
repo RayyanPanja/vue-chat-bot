@@ -176,9 +176,15 @@ body[data-chatbot-theme="default"] {
 
 .messages {
   flex: 1;
-  max-height: 300px;
+  min-height: 350px;
+  max-height: 600px;
   overflow-y: auto;
   margin-bottom: 10px;
+}
+
+.messages::-webkit-scrollbar {
+  width: 5px;
+  background-color: var(--primary);
 }
 
 .message {
