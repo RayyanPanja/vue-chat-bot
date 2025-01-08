@@ -1,5 +1,12 @@
 <script setup>
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
+import useTheme from "../composable/useTheme.js";
+
+const { themeOptions, setTheme } = useTheme();
+
+onMounted(() => {
+  setTheme(import.meta.env.VITE_CHATBOT_COLOR_THEME ?? themeOptions[0].value);
+});
 
 const isChatWindowVisible = ref(false);
 const messages = ref([
