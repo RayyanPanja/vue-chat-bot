@@ -1,43 +1,13 @@
 <script setup>
 import { onMounted, ref } from "vue";
 import useTheme from "../composable/useTheme.js";
+import useConfigurations from "../composable/useConfigurations.js";
 const { themeOptions, setTheme } = useTheme();
-
-
-const assistant = ref({});
-
-const fetchAIConfig = async () => {
-  try {
-    const path = import.meta.env.VITE_PATH_TO_ASSISTANT_CONFIG;
-    const response = await fetch(path);
-    const contentType = response.headers.get("content-type");
-
-    if (!contentType || !contentType.includes("application/json")) {
-      throw new Error("The configuration file must be a valid JSON file.");
-    }
-
-    const data = await response.json();
-    if (!data.name || !data.assistant_id || !data.instruction) {
-      throw new Error(
-        "The configuration file must have a 'name', 'assistant_id', and 'instruction' key."
-      );
-    }
-
-    const { name, assistant_id, instruction } = data;
-    assistant.value = { name, assistant_id, instruction };
-
-    return true;
-  } catch (error) {
-    console.error("Error loading AI configuration:", error);
-    return false; // Return false to indicate failure
-  }
-};
-
-
+const { loadConfig, assistant } = useConfigurations();
 
 
 onMounted(async () => {
-  const configLoaded = await fetchAIConfig();
+  const configLoaded = await loadConfig();
 
   if (!configLoaded) {
     console.error("Failed to load AI configuration. The component will not load.");
