@@ -1,14 +1,16 @@
+@import url("./assets/css/themes.css");
+
 .toggle-ai-chatbot-btn {
   position: fixed;
-  bottom: 20%;
-  right: 20%;
+  bottom: 20px;
+  right: 20px;
   z-index: 9999;
   background: var(--primary-color);
   color: var(--text-color);
   border: none;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +19,7 @@
 }
 
 .toggle-ai-chatbot-btn:hover {
-  background: var(--text-color);
+  filter: brightness(1.2);
 }
 
 .toggle-ai-chatbot-btn>.icon {
