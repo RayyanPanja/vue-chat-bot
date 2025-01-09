@@ -1,12 +1,52 @@
 <script setup>
 import { onMounted, ref } from "vue";
 import useTheme from "../composable/useTheme.js";
-
 const { themeOptions, setTheme } = useTheme();
 
-onMounted(() => {
+
+const assistant = ref({});
+
+const fetchAIConfig = async () => {
+  try {
+    const path = import.meta.env.VITE_PATH_TO_ASSISTANT_CONFIG;
+    const response = await fetch(path);
+    const contentType = response.headers.get("content-type");
+
+    if (!contentType || !contentType.includes("application/json")) {
+      throw new Error("The configuration file must be a valid JSON file.");
+    }
+
+    const data = await response.json();
+    if (!data.name || !data.assistant_id || !data.instruction) {
+      throw new Error(
+        "The configuration file must have a 'name', 'assistant_id', and 'instruction' key."
+      );
+    }
+
+    const { name, assistant_id, instruction } = data;
+    assistant.value = { name, assistant_id, instruction };
+
+    return true;
+  } catch (error) {
+    console.error("Error loading AI configuration:", error);
+    return false; // Return false to indicate failure
+  }
+};
+
+
+
+
+onMounted(async () => {
+  const configLoaded = await fetchAIConfig();
+
+  if (!configLoaded) {
+    console.error("Failed to load AI configuration. The component will not load.");
+    return;
+  }
+
   setTheme(import.meta.env.VITE_CHATBOT_COLOR_THEME ?? themeOptions[0].value);
 });
+
 
 const isChatWindowVisible = ref(false);
 const messages = ref([
@@ -23,6 +63,10 @@ const sendMessage = () => {
   if (userMessage.value.trim() === "") return;
   messages.value.push({ id: Date.now(), type: "user", text: userMessage.value });
   userMessage.value = "";
+
+  setTimeout(() => {
+    messages.value.push({ id: Date.now(), type: "assistant", text: "Hello, how can I help you?" });
+  }, 1500);
 };
 
 /**
@@ -58,8 +102,9 @@ const changeTheme = (theme) => {
 
   <div v-if="isChatWindowVisible" class="chat-popup d-flex" id="chatbox">
     <div class="chat-header d-flex justify-content-between align-items-center">
-      <strong>Botname</strong>
-      <select class="form-select form-select-sm w-auto theme-selector" v-model="selectedTheme" @change="changeTheme(selectedTheme)">
+      <strong>{{ assistant.name }}</strong>
+      <select class="form-select form-select-sm w-auto theme-selector" v-model="selectedTheme"
+        @change="changeTheme(selectedTheme)">
         <option v-for="option in themeOptions" :key="option.value" :value="option.value">
           {{ option.label }}
         </option>
