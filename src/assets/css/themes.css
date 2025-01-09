@@ -1,69 +1,71 @@
+/* Default theme */
 :root {
-    --color-primary: #007bff;
-    --color-secondary: #f8f9fa;
-    --color-background: #ffffff;
-    --color-text: #212529;
-
-    --color-primary-dark: #0056b3;
-    --color-primary-darker: #003580;
+    --primary-color: #4b5945;
+    --text-color: #fff;
+    --chat-screen-color: #b2c9ad;
+    --user-message-color: #252e21;
+    --bot-message-color: #5a7459;
 }
 
-body[data-chatbot-theme="twilightBlue"] {
-    --color-primary: #3A5BA0;
-    --color-secondary: #C2D4FC;
-    --color-background: #1E2B40;
-    --color-text: #FFFFFF;
-
-    --color-primary-dark: #2e3164;
-    --color-primary-darker: #1A1C3C;
+/* Ocean Blue Theme */
+body[data-chatbot-theme="oceanBlue"] {
+    --primary-color: #006994;
+    --text-color: #ffffff;
+    --chat-screen-color: #b3d9ff;
+    --user-message-color: #004d73;
+    --bot-message-color: #007acc;
 }
 
-body[data-chatbot-theme="lightGreen"] {
-    --color-primary: #2ecc71;
-    --color-secondary: #d4edda;
-    --color-background: #ffffff;
-    --color-text: #155724;
-
-    --color-primary-dark: #25b14f;
-    --color-primary-darker: #1e8a3c;
+/* Sunset Glow Theme */
+body[data-chatbot-theme="sunsetGlow"] {
+    --primary-color: #ff4500;
+    --text-color: #ffffff;
+    --chat-screen-color: #ffe6cc;
+    --user-message-color: #ff751a;
+    --bot-message-color: #ffae42;
 }
 
-body[data-chatbot-theme="darkMode"] {
-    --color-primary: #222831;
-    --color-secondary: #393e46;
-    --color-background: #000000;
-    --color-text: #eeeeee;
-
-    --color-primary-dark: #1e2126;
-    --color-primary-darker: #16181d;
+/* Forest Green Theme */
+body[data-chatbot-theme="forestGreen"] {
+    --primary-color: #013220;
+    --text-color: #ffffff;
+    --chat-screen-color: #a3cfa4;
+    --user-message-color: #014d26;
+    --bot-message-color: #017a4a;
 }
 
-body[data-chatbot-theme="sunsetOrange"] {
-    --color-primary: #e63946;
-    --color-secondary: #f4a261;
-    --color-background: #ffffff;
-    --color-text: #2a2a2a;
-
-    --color-primary-dark: #d0333b;
-    --color-primary-darker: #9b2226;
+/* Midnight Theme */
+body[data-chatbot-theme="midnight"] {
+    --primary-color: #1c1c3c;
+    --text-color: #dcdcdc;
+    --chat-screen-color: #2f2f4f;
+    --user-message-color: #4c4c6f;
+    --bot-message-color: #6363a1;
 }
 
-body[data-chatbot-theme="midnightPurple"] {
-    --color-primary: #6a0572;
-    --color-secondary: #d4b0f2;
-    --color-background: #1b1b2f;
-    --color-text: #ffffff;
-
-    --color-primary-dark: #580464;
-    --color-primary-darker: #400349;
+/* Pastel Pink Theme */
+body[data-chatbot-theme="pastelPink"] {
+    --primary-color: #ffb6c1;
+    --text-color: #5a5a5a;
+    --chat-screen-color: #fff0f5;
+    --user-message-color: #f8a5c2;
+    --bot-message-color: #fcbad1;
 }
 
-body[data-chatbot-theme="oceanTeal"] {
-    --color-primary: #00adb5;
-    --color-secondary: #e0f7fa;
-    --color-background: #ffffff;
-    --color-text: #004d40;
+/* Solar Flare Theme */
+body[data-chatbot-theme="solarFlare"] {
+    --primary-color: #ffcc00;
+    --text-color: #000000;
+    --chat-screen-color: #fff6cc;
+    --user-message-color: #ffc107;
+    --bot-message-color: #ffeb3b;
+}
 
-    --color-primary-dark: #008e9a;
-    --color-primary-darker: #006466;
+/* Purple Dream Theme */
+body[data-chatbot-theme="purpleDream"] {
+    --primary-color: #6a0dad;
+    --text-color: #ffffff;
+    --chat-screen-color: #d9b3ff;
+    --user-message-color: #8a2be2;
+    --bot-message-color: #a36ecc;
 }

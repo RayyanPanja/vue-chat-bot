@@ -1,11 +1,12 @@
 {
   "themes": [
     "default",
-    "twilightBlue",
-    "lightGreen",
-    "darkMode",
-    "sunsetOrange",
-    "midnightPurple",
-    "oceanTeal"
+    "oceanBlue",
+    "sunsetGlow",
+    "forestGreen",
+    "midnight",
+    "pastelPink",
+    "solarFlare",
+    "purpleDream"
   ]
 }
