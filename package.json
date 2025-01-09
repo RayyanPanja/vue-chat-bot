@@ -1,6 +1,6 @@
 {
   "name": "@rayyan-panja/vue-ai-chat-bot",
-  "version": "1.2.13",
+  "version": "1.2.14",
   "main": "src/vue-ai-chat-bot.js",
   "scripts": {
     "dev": "vite",
