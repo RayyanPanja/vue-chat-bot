@@ -38,7 +38,7 @@
   color: var(--primary-color);
 }
 
-theme-selector option:checked,
+.theme-selector option:checked,
 .theme-selector option:hover {
   background-color: var(--primary-color);
   color: var(--text-color);
@@ -96,6 +96,7 @@ theme-selector option:checked,
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 8px;
+  color: var(--text-color);
 }
 
 .system-message {
@@ -106,11 +107,9 @@ theme-selector option:checked,
 .assistant-message {
   text-align: left;
   background-color: var(--bot-message-color);
-  color: var(--text-color);
 }
 
 .user-message {
   text-align: right;
   background-color: var(--user-message-color);
-  color: var(--text-color);
 }
