@@ -52,14 +52,14 @@ const changeTheme = (theme) => {
 </script>
 
 <template>
-  <button class="toggle-ai-chatbot-btn" @click="toggleChatWindow">
+  <button v-if="!isChatWindowVisible" class="toggle-ai-chatbot-btn" @click="toggleChatWindow">
     <i class="bi bi-chat"></i>
   </button>
 
   <div v-if="isChatWindowVisible" class="chat-popup d-flex" id="chatbox">
     <div class="chat-header d-flex justify-content-between align-items-center">
       <strong>Botname</strong>
-      <select class="form-select form-select-sm w-auto" v-model="selectedTheme" @change="changeTheme(selectedTheme)">
+      <select class="form-select form-select-sm w-auto theme-selector" v-model="selectedTheme" @change="changeTheme(selectedTheme)">
         <option v-for="option in themeOptions" :key="option.value" :value="option.value">
           {{ option.label }}
         </option>

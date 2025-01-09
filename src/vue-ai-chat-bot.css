@@ -26,6 +26,24 @@
   font-size: 30px;
 }
 
+.theme-selector {
+  background: transparent;
+  color: var(--text-color);
+  border: 0;
+  border-bottom: 1px solid var(--text-color);
+  text-align: center;
+}
+
+.theme-selector option {
+  color: var(--primary-color);
+}
+
+theme-selector option:checked,
+.theme-selector option:hover {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
 .chat-popup {
   position: fixed;
   bottom: 20px;
