@@ -1,28 +1,21 @@
 <script setup>
-import { onMounted, ref } from "vue";
+import { nextTick, onMounted, ref, watch } from "vue";
 import useTheme from "../composable/useTheme.js";
 import useConfigurations from "../composable/useConfigurations.js";
 const { themeOptions, setTheme } = useTheme();
 const { loadConfig, assistant } = useConfigurations();
 
-
 onMounted(async () => {
   const configLoaded = await loadConfig();
-
   if (!configLoaded) {
     console.error("Failed to load AI configuration. The component will not load.");
     return;
   }
-
   setTheme(import.meta.env.VITE_CHATBOT_COLOR_THEME ?? themeOptions[0].value);
 });
 
-
 const isChatWindowVisible = ref(false);
-const messages = ref([
-  { id: 1, type: "system", text: "Welcome to the chat!" },
-]);
-
+const messages = ref([{ id: 1, type: "system", text: "Welcome to the chat!" }]);
 const userMessage = ref("");
 
 const toggleChatWindow = () => {
@@ -33,32 +26,39 @@ const sendMessage = () => {
   if (userMessage.value.trim() === "") return;
   messages.value.push({ id: Date.now(), type: "user", text: userMessage.value });
   userMessage.value = "";
-
   setTimeout(() => {
-    messages.value.push({ id: Date.now(), type: "assistant", text: "Hello, how can I help you?" });
+    messages.value.push({
+      id: Date.now(),
+      type: "assistant",
+      text: "Hello, how can I help you?",
+    });
   }, 1500);
 };
 
-/**
- * Converts a message type (user, system, assistant) to a class name
- * that can be used in the message component.
- *
- * @param {string} type - The type of the message.
- *
- * @returns {string} - The CSS class name that corresponds to the given type.
- */
+watch(
+  () => messages.value.length,
+  async () => {
+    await nextTick();
+    const chatbox = document.getElementById("chat-body");
+    if (chatbox) {
+      chatbox.scroll({
+        top: chatbox.scrollHeight,
+        behavior: "smooth",
+      });
+    }
+  }
+);
+
 const parseMessageType = (type) => {
   const types = {
-    user: "user-message",
-    system: "system-message",
-    assistant: "assistant-message",
+    user: "user-message align-self-end",
+    system: "system-message align-self-center",
+    assistant: "assistant-message align-self-start",
   };
   return types[type];
 };
 
-// Handle theme selection
 const selectedTheme = ref(import.meta.env.VITE_CHATBOT_COLOR_THEME ?? themeOptions[0].value);
-
 const changeTheme = (theme) => {
   setTheme(theme);
   selectedTheme.value = theme;
@@ -70,7 +70,7 @@ const changeTheme = (theme) => {
     <i class="bi bi-chat"></i>
   </button>
 
-  <div v-if="isChatWindowVisible" class="chat-popup d-flex" id="chatbox">
+  <div v-if="isChatWindowVisible" class="chat-popup d-flex" id="chat-popup">
     <div class="chat-header d-flex justify-content-between align-items-center">
       <strong>{{ assistant.name }}</strong>
       <select class="form-select form-select-sm w-auto theme-selector" v-model="selectedTheme"
@@ -82,7 +82,7 @@ const changeTheme = (theme) => {
       <button class="btn-close btn-close-white float-end" @click="toggleChatWindow"></button>
     </div>
 
-    <div class="chat-body">
+    <div id="chat-body" class="chat-body d-flex flex-column">
       <div v-for="message in messages" :key="message.id" class="message" :class="parseMessageType(message.type)">
         {{ message.text }}
       </div>
